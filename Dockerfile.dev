@@ -4,9 +4,9 @@ USER node
 
 WORKDIR '/app'
 
-COPY --chown=node:node package.json .
+COPY --chown=vvillschneider:vvillschneider package.json .
 RUN npm install
 
-COPY --chown=node:node . .
+COPY --chown=vvillschneider:vvillschneider . .
 
 CMD ["npm", "run", "start"]
